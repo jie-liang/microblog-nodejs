@@ -1,0 +1,10 @@
+<% layout('layout-desktop') -%>
+<% script('/javascripts/jquery-1.9.1.js') -%>
+<% script('/javascripts/bootstrap.js') -%>
+<% stylesheet('/stylesheets/bootstrap.css') -%>
+<% stylesheet('/stylesheets/bootstrap-responsive.css') -%>
+<% if (user) { %>
+	<%- partial('says') %>
+<% } %>
+<%- partial('blogs') %>
+<% block('footer', '<p><a href="http://code.google.com/p/microblog-nodejs/" target="_blank">microblog-nodejs on Google Code</a> 2013</p>') -%>

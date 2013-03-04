@@ -1,0 +1,19 @@
+<% layout('layout-desktop') -%>
+<% script('/javascripts/jquery-1.9.1.js') -%>
+<% script('/javascripts/bootstrap.js') -%>
+<% stylesheet('/stylesheets/bootstrap.css') -%>
+<% stylesheet('/stylesheets/bootstrap-responsive.css') -%>
+<% if(!user) {%>
+	<div class="hero-unit">
+		<h1>microblog</h1>
+		<p>a microblogging app based on node.js</p>
+		<p>
+		<a class="btn btn-primary btn-large" href="/login">Sign In</a>
+		<a class="btn btn-large" href="/reg">Register</a>
+		</p>
+	</div>
+<% } else { %>
+	<%- partial('says') %>
+<% } %>
+<%- partial('blogs') %>
+<% block('footer', '<p><a href="http://code.google.com/p/microblog-nodejs/" target="_blank">microblog-nodejs on Google Code</a> 2013</p>') -%>

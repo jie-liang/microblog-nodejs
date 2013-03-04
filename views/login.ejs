@@ -1,0 +1,26 @@
+<% layout('layout-desktop') -%>
+<% script('/javascripts/jquery-1.9.1.js') -%>
+<% script('/javascripts/bootstrap.js') -%>
+<% stylesheet('/stylesheets/bootstrap.css') -%>
+<% stylesheet('/stylesheets/bootstrap-responsive.css') -%>
+<form class="form-horizontal" method="post">
+	<fieldset>
+		<legend>Sign In</legend>
+		<div class="control-group">
+			<label class="control-label" for="username">Username</label>
+			<div class="controls">
+				<input type="text" class="input-xlarge" id="username" name="username">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="password">Password</label>
+			<div class="controls">
+				<input type="password" class="input-xlarge" id="password" name="password">
+			</div>
+		</div>
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary">Sign In</button>
+		</div>
+	</fieldset>
+</form>
+<% block('footer', '<p><a href="http://code.google.com/p/microblog-nodejs/" target="_blank">microblog-nodejs on Google Code</a> 2013</p>') -%>
